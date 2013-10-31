@@ -1,0 +1,23 @@
+" Set colorscheme
+colorscheme molokai
+" Paste toggle to insert blocks of code
+set pastetoggle=<F2>
+" Remap : key for vim commands
+nnoremap ; :
+" Set cursor line 
+:set cursorcolumn
+:set cursorline
+highlight CursorColumn guibg=lightblue ctermbg=darkgray
+highlight CursorLine guibg=lightblue ctermbg=darkgray
+" Normal vim pane color
+"
+" Change Tab spacing
+set nowrap                      " Do not wrap long lines
+set autoindent                  " Indent at the same level of the previous line
+set shiftwidth=2                " Use indents of 2 spaces
+set expandtab                   " Tabs are spaces, not tabs
+set tabstop=2                   " An indentation every four columns
+set softtabstop=2               " Let backspace delete indent
+set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
+set splitright                  " Puts new vsplit windows to the right of the current
+set splitbelow                  " Puts new split windows to the bottom of the current
