@@ -7,11 +7,16 @@ nnoremap ; :
 " Set cursor line 
 :set cursorcolumn
 :set cursorline
-highlight CursorColumn guibg=lightblue ctermbg=darkgray
-highlight CursorLine guibg=lightblue ctermbg=darkgray
-" Normal vim pane color
-"
-" Change Tab spacing
+" Modify some colors
+highlight Normal ctermbg=234
+highlight NonText ctermbg=234
+highlight LineNr ctermbg=234
+highlight CursorColumn ctermbg=235
+highlight CursorLine ctermbg=235
+" Remove annoying highlighting from spf13 (related to spell checking)
+" https://github.com/spf13/spf13-vim/issues/67
+set nospell
+" Change Tab and spacing
 set nowrap                      " Do not wrap long lines
 set autoindent                  " Indent at the same level of the previous line
 set shiftwidth=2                " Use indents of 2 spaces
@@ -19,5 +24,9 @@ set expandtab                   " Tabs are spaces, not tabs
 set tabstop=2                   " An indentation every four columns
 set softtabstop=2               " Let backspace delete indent
 set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
+" Modify split direction to explicitly split right and bottom
 set splitright                  " Puts new vsplit windows to the right of the current
 set splitbelow                  " Puts new split windows to the bottom of the current
+
+" Temporarily remove autocomplete, it is causing frequent segfaults
+UnBundle 'Shougo/neocomplcache'
