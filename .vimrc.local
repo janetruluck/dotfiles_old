@@ -15,7 +15,7 @@ highlight CursorColumn ctermbg=235
 highlight CursorLine ctermbg=235
 " Remove annoying highlighting from spf13 (related to spell checking)
 " https://github.com/spf13/spf13-vim/issues/67
-set nospell
+:set nospell
 " Change Tab and spacing
 set nowrap                      " Do not wrap long lines
 set autoindent                  " Indent at the same level of the previous line
