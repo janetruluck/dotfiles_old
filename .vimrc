@@ -131,6 +131,12 @@ endif
     nnoremap ; :
     " Yank from the cursor to the end of the line, to be consistent with C and D.
     nnoremap Y y$
+    " Use ctrl-[hjkl] to select the active split! {
+     nmap <silent> <c-k> :wincmd k<CR>
+     nmap <silent> <c-j> :wincmd j<CR>
+     nmap <silent> <c-h> :wincmd h<CR>
+     nmap <silent> <c-l> :wincmd l<CR>
+    " }
     " Fix home and end keybindings for screen, particularly on mac {
         map [F $
         imap [F $
