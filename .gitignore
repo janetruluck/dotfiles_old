@@ -1,5 +1,7 @@
 *
 !.gitignore
+!.vimrc
+!.vimrc.bundles
 !.vimrc.local
 !.zshrc
 !.tmux.conf
