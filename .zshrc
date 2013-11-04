@@ -45,12 +45,12 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin
-export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
-export PATH="/usr/local/bin:$PATH" >> ~/.bash_profile
-
+PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin
+PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+PATH="/usr/local/bin:$PATH" >> ~/.bash_profile
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
+export PATH
 # Alias for commands
 alias tmux="TERM=screen-256color-bce tmux"
 alias tmuxrld="tmux source-file ~/.tmux.conf"
+
