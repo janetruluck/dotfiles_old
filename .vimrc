@@ -31,6 +31,20 @@ endif
   autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif " Always switch to the current file directory"
   " Backup and undo options {
     set backup                  " Enable Backups
+    let common_directory = $HOME . "/.vimbackups/"
+    if exists("*mkdir")
+      if !isdirectory(common_directory)
+        echo "Creating common backup directory at (this is a one time thing unless deleted or moved): " . common_directory
+        call mkdir(common_directory)
+      endif
+    endif
+    if isdirectory(common_directory)
+      exec "set backupdir=" . common_directory
+      exec "set directory=" . common_directory
+    else
+      echo "Warning: Unable to find backup directory: " . common_directory
+      echo "Try: mkdir -p " . common_directory
+    endif
     if has('persistent_undo')
       set undofile                " Enable persistent undo
       set undolevels=1000         " Maximum number of changes that can be undone
