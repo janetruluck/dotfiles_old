@@ -40,6 +40,7 @@ endif
     endif
     if isdirectory(common_directory)
       exec "set backupdir=" . common_directory
+      exec "set undodir=" . common_directory
       exec "set directory=" . common_directory
     else
       echo "Warning: Unable to find backup directory: " . common_directory
