@@ -1,12 +1,10 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bira"
-
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -45,12 +43,21 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+SCALA_HOME=/usr/local/share/scala
+RVM_HOME=$HOME/.rvm
+POSTGRES_HOME=/Applications/Postgres.app/Contents/MacOS/bin
+PLAY_HOME=$PATH:/usr/local/share/play
+
 PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin
-PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
-PATH="/usr/local/bin:$PATH" >> ~/.bash_profile
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$POSTGRES_HOME:$PATH                         # Add Postgres.app to path
+PATH=$PATH:$RVM_HOME/bin                          # Add RVM to PATH
+PATH=$PATH:$SCALA_HOME/bin                        # Add SCALA to PATH
+PATH=$PATH:$PLAY_HOME                             # Add PLAY! to PATH
+PATH="/usr/local/bin:$PATH" >> ~/.bash_profile    # Copy to .bashrc
 export PATH
+
 # Alias for commands
 alias tmux="TERM=screen-256color-bce tmux"
 alias tmuxrld="tmux source-file ~/.tmux.conf"
+alias mcsssh="ssh deploy@staging.missioncontrol.io" # SSH to missioncontrol staging
 
