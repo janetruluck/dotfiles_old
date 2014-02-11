@@ -4,6 +4,7 @@
     if !(has('win16') || has('win32') || has('win64'))
         set shell=/bin/sh
     endif
+    set ttyfast
 " }
 " Setup Bundle Support {
     " The next three lines ensure that the ~/.vim/bundle/ system works
@@ -68,8 +69,11 @@ endif
 " Color Scheme and GUI modifications {
     set backspace=indent,eol,start  " Backspace for dummies"
     set background=dark             " Assume a dark background"
-    set cursorcolumn                " Enable cursor column
-    set cursorline                  " Enable cursor line 
+    " These appear to cause some significant lag when scrolling large files
+    " I added a keymap to enable them on demand and disabled by defautl (check
+    " keyremaps) uncomment them to enable them by default
+    "set cursorcolumn                " Enable cursor column
+    "set cursorline                  " Enable cursor line 
     set tabpagemax=15               " Only show 15 tabs
     set showmode                    " Display the current mode
     set linespace=0                 " No extra spaces between rows
@@ -135,6 +139,9 @@ endif
     set nojoinspaces                    " Prevents inserting two spaces after punctuation on a join (J)
     set splitright                      " Puts new vsplit windows to the right of the current
     set splitbelow                      " Puts new split windows to the bottom of the current
+    " Alternate highlights for indents
+    hi IndentGuidesOdd  ctermbg=black
+    hi IndentGuidesEven ctermbg=darkgrey
     " Remove Trailing whitespace  {
         autocmd FileType c,cpp,java,go,php,javascript,python,ruby,twig,xml,yml autocmd BufWritePre <buffer> :%s/\s\+$//e " Auto removal on save for certain file types
         nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR> " On Demand whitespace removal, push <F5> baby!
@@ -146,6 +153,8 @@ endif
     nnoremap ; :
     " Yank from the cursor to the end of the line, to be consistent with C and D.
     nnoremap Y y$
+    " Add toggling for curor highlighting
+    nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
     " Use ctrl-[hjkl] to select the active split! {
      nmap <silent> <c-k> :wincmd k<CR>
      nmap <silent> <c-j> :wincmd j<CR>
@@ -192,6 +201,8 @@ endif
     " vim-gitgutter {
         " https://github.com/airblade/vim-gitgutter/issues/106
         let g:gitgutter_realtime = 0
+        " stop eager execution
+        let g:gitgutter_eager = 0
     " }
     " Fugitive {
         nnoremap <silent> <leader>gs :Gstatus<CR>
@@ -304,6 +315,15 @@ endif
         " When enabled, there can be too much visual noise
         " especially when splits are used.
         set completeopt-=preview
+    " }
+    " NERDTree {
+        " auto open when vim starts
+        autocmd vimenter * NERDTree
+        " auto close if last buffer
+        autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+        " plugin Keymaps {
+            nmap <C-n> :NERDTreeToggle<CR>
+        " }
     " }
 " }
 " Use local vimrc if available {

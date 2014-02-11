@@ -27,25 +27,23 @@
         endif
     " }
     " General/Misc {
-    	Bundle 'tpope/vim-surround'
+        Bundle 'tpope/vim-surround'
         Bundle 'spf13/vim-autoclose'
-
     " }
     " Aesthetics {
         Bundle 'flazz/vim-colorschemes'
     " }
     " Usability { 
         Bundle 'bling/vim-airline'
-	    Bundle 'mbbill/undotree'
 	    " Relative/Static line numbers depending on mode
-	    Bundle 'myusuf3/numbers.vim' 			 
+	    Bundle 'myusuf3/numbers.vim'
 	    " detect spacing/indentation visually
 		Bundle 'nathanaelkane/vim-indent-guides' 
-		Bundle 'airblade/vim-gitgutter'
+		"Bundle 'airblade/vim-gitgutter'
 		" Make a bunch of common spelling mistakes? This will change your life!
-		Bundle 'tpope/vim-abolish.git' 			 
+		Bundle 'tpope/vim-abolish.git'
 		" Sublime Text 2 like CMD + d and other goodies
-		Bundle 'terryma/vim-multiple-cursors'    
+		Bundle 'terryma/vim-multiple-cursors'
     " }
     " Files {
    		Bundle 'scrooloose/nerdtree'
@@ -53,13 +51,11 @@
     " }
     " Programming {
     	" Nice syntax hightlighting
-    	Bundle 'scrooloose/syntastic' 	  
-    	" Quite possibly the best git vim plugin ever...
-    	Bundle 'tpope/vim-fugitive'	  	  
+    	Bundle 'scrooloose/syntastic'
     	" Comment code like a boss
     	Bundle 'scrooloose/nerdcommenter' 
-    	" Also alighn text like a boss
-    	Bundle 'godlygeek/tabular'		  
+    	" Also align text like a boss
+    	Bundle 'godlygeek/tabular'
     " }
     " Snippets and Autocompelte {
     	" Requires vim to be compiled with --with-lua
@@ -90,5 +86,8 @@
 	        Bundle 'jnwhiteh/vim-golang'
 	        Bundle 'spf13/vim-gocode'
 	    " }
+        " Scala {
+            Bundle 'derekwyatt/vim-scala'
+        " }
     " }
 "}
