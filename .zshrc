@@ -61,3 +61,5 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias tmuxrld="tmux source-file ~/.tmux.conf"
 alias mcsssh="ssh deploy@staging.missioncontrol.io" # SSH to missioncontrol staging
 
+alias rexx="cd $HOME/Projects/bitbucket/filmrexx/" # SSH to missioncontrol staging
+
