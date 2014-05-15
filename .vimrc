@@ -29,6 +29,7 @@ endif
   set hidden                          " Allow buffer switching without saving"
   set nospell
   set virtualedit=onemore             " Allow for cursor beyond last character
+  set splitright                      " Split new files to the right with C-w + n
   autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif " Always switch to the current file directory"
   " Backup and undo options {
     set backup                  " Enable Backups
@@ -67,6 +68,7 @@ endif
   " }
 " }
 " Color Scheme and GUI modifications {
+    colorscheme atom-dark           " Set colorscheme
     set backspace=indent,eol,start  " Backspace for dummies"
     set background=dark             " Assume a dark background"
     " These appear to cause some significant lag when scrolling large files
@@ -74,6 +76,7 @@ endif
     " keyremaps) uncomment them to enable them by default
     "set cursorcolumn                " Enable cursor column
     "set cursorline                  " Enable cursor line 
+    set colorcolumn=80              " Add indicator for 80 character line length
     set tabpagemax=15               " Only show 15 tabs
     set showmode                    " Display the current mode
     set linespace=0                 " No extra spaces between rows
@@ -92,6 +95,7 @@ endif
     set foldenable                  " Auto fold code
     set list
     set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
+
 
     if has('cmdline_info')
         set ruler                   " Show the ruler
@@ -119,15 +123,6 @@ endif
         autocmd InsertLeave * match ExtraWhitespace /\s\+$/
         autocmd BufWinLeave * call clearmatches()
     " }
-    " Setup Colorscheme and Overrides {
-        colorscheme molokai                  " Set colorscheme
-        highlight Normal ctermbg=234
-        highlight NonText ctermbg=234
-        highlight LineNr ctermbg=234
-        highlight CursorColumn ctermbg=235
-        highlight CursorLine ctermbg=235
-    " }
-" }
 " Formatting {
     set pastetoggle=<F12>                " Paste toggle to insert blocks of code
     set nowrap                          " Do not wrap long lines
@@ -318,12 +313,20 @@ endif
     " }
     " NERDTree {
         " auto open when vim starts
-        autocmd vimenter * NERDTree
+        "autocmd vimenter * NERDTree
         " auto close if last buffer
         autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
         " plugin Keymaps {
             nmap <C-n> :NERDTreeToggle<CR>
         " }
+    " }
+    " ctrl-p{
+        let g:ctrlp_custom_ignore = {
+                \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+                \ 'file': '\v\.(exe|so|dll)$',
+                \ 'link': 'some_bad_symbolic_links',
+                \ }
+        let g:ctrlp_working_path_mode = "r"
     " }
 " }
 " Use local vimrc if available {
