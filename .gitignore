@@ -3,5 +3,6 @@
 !.vimrc
 !.vimrc.bundles
 !.vimrc.local
+!.vim/colors/atom-dark.vim
 !.zshrc
 !.tmux.conf
