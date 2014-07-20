@@ -38,13 +38,13 @@ ZSH_THEME="bira"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git bundler rails web-search)
 
 # Customize to your needs...
 COMMON_PATHS=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 SCALA_HOME=/usr/local/share/scala
 RVM_HOME=$HOME/.rvm
-POSTGRES_HOME=/Applications/Postgres.app/Contents/MacOS/bin
+POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/9.3/bin
 PLAY_HOME=/usr/local/share/play
 GO_HOME=$HOME/.go
 
@@ -62,7 +62,5 @@ export GOPATH
 # Alias for commands
 alias tmux="TERM=screen-256color-bce tmux"
 alias tmuxrld="tmux source-file ~/.tmux.conf"
-alias mcsssh="ssh deploy@staging.missioncontrol.io" # SSH to missioncontrol staging
-alias rexx="cd $HOME/Projects/bitbucket/filmrexx/" # SSH to missioncontrol staging
 
 source $ZSH/oh-my-zsh.sh
