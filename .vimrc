@@ -29,7 +29,6 @@
   set nospell
   set virtualedit=onemore             " Allow for cursor beyond last character
   set splitright                      " Split new files to the right with C-w + n
-  autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif " Always switch to the current file directory"
   " Backup and undo options {
     set backup                  " Enable Backups
     let common_directory = $HOME . "/.vimbackups/"
