@@ -26,7 +26,7 @@ RVM_HOME=$HOME/.rvm
 POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/9.3/bin
 PLAY_HOME=/usr/local/share/play
 GO_HOME=$HOME/.go
-TMUXIFIER=$HOME/.tmuxifier
+TMUXINATOR=$HOME/.tmuxinator
 
 PATH=$COMMON_PATHS
 PATH=$PATH:$POSTGRES_HOME   # Add Postgres.app to path
@@ -34,7 +34,6 @@ PATH=$PATH:$SCALA_HOME/bin  # Add SCALA to PATH
 PATH=$PATH:$PLAY_HOME       # Add PLAY! to PATH
 PATH=$PATH:$RVM_HOME/bin    # Add RVM to PATH
 PATH=$PATH:$RVM_HOME/gems   # Add RVM gems to PATH
-PATH=$PATH:$TMUXIFIER       # Add Tmuxifier https://github.com/jimeh/tmuxifier
 export PATH
 
 GOPATH=$GO_HOME             # Add GO to PATH
@@ -44,4 +43,5 @@ export GOPATH
 alias tmux="TERM=screen-256color-bce tmux"
 alias tmuxrld="tmux source-file ~/.tmux.conf"
 
+source $TMUXINATOR/completion.zsh
 source $ZSH/oh-my-zsh.sh
