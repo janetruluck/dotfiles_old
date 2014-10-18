@@ -16,6 +16,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git bundler rails web-search)
 
+# Set vim as the default editor
+export EDITOR='vim'
+
 # Customize to your needs...
 COMMON_PATHS=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 SCALA_HOME=/usr/local/share/scala
