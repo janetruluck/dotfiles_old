@@ -19,7 +19,6 @@
     " }
     " General/Misc {
         Plugin 'tpope/vim-surround'
-        Plugin 'spf13/vim-autoclose'
     " }
     " Aesthetics {
     " }

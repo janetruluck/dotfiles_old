@@ -145,8 +145,6 @@
 " Key Remanps {
     " Remap Leader key
     let mapleader = ','
-    " Remap : to ; key for vim commands
-    nnoremap ; :
     " Yank from the cursor to the end of the line, to be consistent with C and D.
     nnoremap Y y$
     " Add toggling for curor highlighting
