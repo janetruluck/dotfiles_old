@@ -43,7 +43,8 @@ export GOPATH
 alias tmux="TERM=screen-256color-bce tmux"
 alias tmuxrld="tmux source-file ~/.tmux.conf"
 alias pytest="./manage.py test app assistants charter csr logged_forms main_site metrics newsletter notifications scheduler selenium_tests user_profile utils vendors"
-alias cleanmerged="git branch -r --merged | grep -v master | sed 's/origin\///'  | xargs -n 1 git push --delete origin"
+alias cleanremotemerged="git branch -r --merged | grep -v master | sed 's/origin\///'  | xargs -n 1 git push --delete origin"
+alias cleanlocalmerged="git branch --merged master | grep -v "\* master" | xargs -n 1 git branch -d"
 
 source $TMUXINATOR/completion.zsh
 source $ZSH/oh-my-zsh.sh
