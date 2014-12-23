@@ -19,11 +19,17 @@ plugins=(git bundler rails web-search)
 # Set vim as the default editor
 export EDITOR='vim'
 
+# Set default postgresql version of the system if one is not set
+# via environment variable POSTGRESQL_VERSION
+if [[ -z "$POSTGRESQL_VERSION" ]]; then
+  export POSTGRESQL_VERSION=9.4
+fi
+
 # Customize to your needs...
 COMMON_PATHS=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 SCALA_HOME=/usr/local/share/scala
 RVM_HOME=$HOME/.rvm
-POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/9.3/bin
+POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/$POSTGRESQL_VERSION/bin
 PLAY_HOME=/usr/local/share/play
 GO_HOME=$HOME/.go
 TMUXINATOR=$HOME/.tmuxinator
