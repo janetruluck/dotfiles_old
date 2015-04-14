@@ -32,7 +32,6 @@ RVM_HOME=$HOME/.rvm
 POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/$POSTGRESQL_VERSION/bin
 PLAY_HOME=/usr/local/share/play
 GO_HOME=$HOME/.go
-TMUXINATOR=$HOME/.tmuxinator
 
 PATH=$COMMON_PATHS
 PATH=$PATH:$POSTGRES_HOME   # Add Postgres.app to path
@@ -48,5 +47,4 @@ export GOPATH
 # Alias for commands
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-source $TMUXINATOR/completion.zsh
 source $ZSH/oh-my-zsh.sh
