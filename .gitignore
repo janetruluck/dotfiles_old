@@ -3,6 +3,8 @@
 !.vimrc
 !.vimrc.bundles
 !.vimrc.local
+!.gemrc
+!.aliases
 !/.vim/
 /.vim/bundle/
 !/.vim/colors/

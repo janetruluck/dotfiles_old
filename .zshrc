@@ -46,11 +46,7 @@ GOPATH=$GO_HOME             # Add GO to PATH
 export GOPATH
 
 # Alias for commands
-alias tmux="TERM=screen-256color-bce tmux"
-alias tmuxrld="tmux source-file ~/.tmux.conf"
-alias cleanremotemerged="git branch -r --merged | grep -v master | sed 's/origin\///'  | xargs -n 1 git push --delete origin"
-alias cleanlocalmerged="git branch --merged master | grep -v \"\\* master\" | xargs -n 1 git branch -d"
-alias gdl="git diff --unified=0"
+[[ -f ~/.aliases ]] && source ~/.aliases
 
 source $TMUXINATOR/completion.zsh
 source $ZSH/oh-my-zsh.sh
