@@ -4,6 +4,7 @@ alias tmuxrld="tmux source-file ~/.tmux.conf"
 alias ta="tmux attach -t"
 alias tn="tmux new -s"
 alias ts="tmux switch -t"
+alias tl="tmux list-sessions"
 
 # GIT
 alias cleanremotemerged="git branch -r --merged | grep -v master | sed 's/origin\///'  | xargs -n 1 git push --delete origin"
