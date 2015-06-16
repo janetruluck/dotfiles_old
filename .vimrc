@@ -135,8 +135,8 @@
     set splitright                      " Puts new vsplit windows to the right of the current
     set splitbelow                      " Puts new split windows to the bottom of the current
     " Alternate highlights for indents
-    hi IndentGuidesOdd  ctermbg=black
-    hi IndentGuidesEven ctermbg=darkgrey
+    " hi IndentGuidesOdd  ctermbg=black
+    " hi IndentGuidesEven ctermbg=darkgrey
     " Remove Trailing whitespace  {
         autocmd FileType c,cpp,java,go,php,javascript,python,ruby,twig,xml,yml autocmd BufWritePre <buffer> :%s/\s\+$//e " Auto removal on save for certain file types
         nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR> " On Demand whitespace removal, push <F5> baby!
@@ -158,7 +158,7 @@
 " }
 " Plugin Settings {
   " Indent Guides {
-        let g:indent_guides_auto_colors = 1
+        " let g:indent_guides_auto_colors = 1
         " For some colorschemes, autocolor will not work (eg: 'desert', 'ir_black')
         " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#212121 ctermbg=3
         " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#404040 ctermbg=4
