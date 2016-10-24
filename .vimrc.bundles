@@ -50,9 +50,10 @@
 	    " Javascript {
 	        Plugin 'elzr/vim-json'
 	        Plugin 'groenewege/vim-less'
-	        Plugin 'pangloss/vim-javascript'
 	        Plugin 'briancollins/vim-jst'
 	        Plugin 'kchmck/vim-coffee-script'
+            " React
+            Plugin 'mxw/vim-jsx'
 	    " }
 	    " Ruby {
 	        Plugin 'tpope/vim-rails'
@@ -66,6 +67,10 @@
 	    " }
         " Scala {
             Plugin 'derekwyatt/vim-scala'
+        " }
+
+        " Elixir {
+            Plugin 'elixir-lang/vim-elixir'
         " }
     " }
 "}
