@@ -39,7 +39,7 @@
     	" Also align text like a boss
     	Plugin 'godlygeek/tabular'
     " }
-    " Snippets and Autocompelte {
+    " Snippets and Autocomplete {
     " }
     " Language Specific {
 	    " HTML {
@@ -48,18 +48,20 @@
 	        Plugin 'tpope/vim-haml'
 	    " }
 	    " Javascript {
+	        Plugin 'pangloss/vim-javascript'
 	        Plugin 'elzr/vim-json'
-	        Plugin 'groenewege/vim-less'
 	        Plugin 'briancollins/vim-jst'
 	        Plugin 'kchmck/vim-coffee-script'
-            " React
+	    " }
+        " LESS {
+	        Plugin 'groenewege/vim-less'
+        " }
+        " React
             Plugin 'mxw/vim-jsx'
 	    " }
 	    " Ruby {
+	        Plugin 'vim-ruby/vim-ruby'
 	        Plugin 'tpope/vim-rails'
-	        let g:rubycomplete_buffer_loading = 1
-	        "let g:rubycomplete_classes_in_global = 1
-	        "let g:rubycomplete_rails = 1
 	    " }
 	    " Go {
 	        Plugin 'jnwhiteh/vim-golang'
@@ -68,7 +70,6 @@
         " Scala {
             Plugin 'derekwyatt/vim-scala'
         " }
-
         " Elixir {
             Plugin 'elixir-lang/vim-elixir'
         " }
