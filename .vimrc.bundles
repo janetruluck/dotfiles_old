@@ -22,12 +22,7 @@
     " }
     " Aesthetics {
     " }
-    " Usability { 
-	    " Relative/Static line numbers depending on mode
-	    Plugin 'myusuf3/numbers.vim'
-	    " detect spacing/indentation visually
-		" Plugin 'nathanaelkane/vim-indent-guides' 
-        Plugin 'kien/ctrlp.vim'
+    " Usability {
     " }
     " Files {
     " }
@@ -35,11 +30,10 @@
     	" Nice syntax hightlighting
     	Plugin 'scrooloose/syntastic'
     	" Comment code like a boss
-    	Plugin 'scrooloose/nerdcommenter' 
-    	" Also align text like a boss
-    	Plugin 'godlygeek/tabular'
+    	Plugin 'scrooloose/nerdcommenter'
     " }
     " Snippets and Autocompelte {
+        Plugin 'Valloric/YouCompleteMe'
     " }
     " Language Specific {
 	    " HTML {
@@ -66,6 +60,9 @@
 	    " }
         " Scala {
             Plugin 'derekwyatt/vim-scala'
+        " }
+        " Elixir {
+            Plugin 'elixir-lang/vim-elixir'
         " }
     " }
 "}

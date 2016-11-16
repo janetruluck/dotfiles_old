@@ -22,15 +22,15 @@ export EDITOR='vim'
 # Set default postgresql version of the system if one is not set
 # via environment variable POSTGRESQL_VERSION
 if [[ -z "$POSTGRESQL_VERSION" ]]; then
-  export POSTGRESQL_VERSION=9.4
+  export POSTGRESQL_VERSION=9.5
 fi
 
 # Customize to your needs...
 COMMON_PATHS=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 SCALA_HOME=/usr/local/share/scala
 RVM_HOME=$HOME/.rvm
-POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/$POSTGRESQL_VERSION/bin
-PLAY_HOME=/usr/local/share/play
+POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/latest/bin
+PLAY_HOME=$HOME/Projects/binaries/activator/bin
 GO_HOME=$HOME/.go
 
 PATH=$COMMON_PATHS
@@ -43,6 +43,10 @@ export PATH
 
 GOPATH=$GO_HOME             # Add GO to PATH
 export GOPATH
+
+# Tool chain for Odroid
+export PATH=/opt/toolchains/gcc-linaro-arm-linux-gnueabihf-4.7-2013.04-20130415_linux/bin:$PATH
+export CROSS_COMPILE=arm-linux-gnueabihf-
 
 # Alias for commands
 [[ -f ~/.aliases ]] && source ~/.aliases

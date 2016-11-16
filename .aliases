@@ -18,3 +18,5 @@ alias bup="bundle update"
 # OTHER
 alias ll="ls -la"
 alias mkdir="mkdir -p"
+alias chrome="/usr/bin/open -a '/Applications/Google Chrome.app'"
+alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
