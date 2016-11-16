@@ -32,6 +32,7 @@ RVM_HOME=$HOME/.rvm
 POSTGRES_HOME=/Applications/Postgres.app/Contents/Versions/latest/bin
 PLAY_HOME=$HOME/Projects/binaries/activator/bin
 GO_HOME=$HOME/.go
+ANDROID_HOME=$HOME/Library/Android/sdk/platform-tools
 
 PATH=$COMMON_PATHS
 PATH=$PATH:$POSTGRES_HOME   # Add Postgres.app to path
@@ -39,6 +40,7 @@ PATH=$PATH:$SCALA_HOME/bin  # Add SCALA to PATH
 PATH=$PATH:$PLAY_HOME       # Add PLAY! to PATH
 PATH=$PATH:$RVM_HOME/bin    # Add RVM to PATH
 PATH=$PATH:$RVM_HOME/gems   # Add RVM gems to PATH
+PATH=$PATH:$ANDROID_HOME    # Add Android tools to PATH
 export PATH
 
 GOPATH=$GO_HOME             # Add GO to PATH

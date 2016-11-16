@@ -157,7 +157,7 @@
     " }
 " }
 " Plugin Settings {
-  " Indent Guides {
+    " Indent Guides {
         " let g:indent_guides_auto_colors = 1
         " For some colorschemes, autocolor will not work (eg: 'desert', 'ir_black')
         " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#212121 ctermbg=3
@@ -187,6 +187,12 @@
         vmap <Leader>a{ :Tabularize /{<CR>
         nmap <Leader>a} :Tabularize /}<CR>
         vmap <Leader>a} :Tabularize /}<CR>
+    " }
+    " NERDCommenter {
+        let g:NERDSpaceDelims = 1
+    " }
+    " vim-jsx {
+        let g:jsx_ext_required = 0 " Allow JSX in normal JS files
     " }
 " }
 " Use local vimrc if available {
